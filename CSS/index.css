@@ -1,0 +1,160 @@
+.grid-container{
+    display:grid;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: 13% 7% 22% 22% 22% auto;
+}
+.head{
+    grid-column-start:1;
+    grid-column-end:4;
+    grid-row-start:1;
+    grid-row-end:2;
+}
+#pic1{
+    animation-name: picture-one;
+    animation-duration: 3s;
+}
+@keyframes picture-one{
+    0%{
+        background-image: url("images/comp1.jpg");
+    }
+    16%{
+        background-image: url("images/log.jpg");
+    }
+    32%{
+        background-image: url("images/mem1.jpg");
+    }
+    50%{
+        background-image: url("images/log.jpg");
+    }
+    70%{
+        background-image: url("images/meme2.jpg");
+    }
+    100%{
+        background-image: url("images/comp2.jpg");
+    }
+}
+#pic2{
+    animation-name: picture-two;
+    animation-duration: 3s;
+}
+@keyframes picture-two{
+    0%{
+        background-image: url("images/comp2.jpg");
+    }
+    16%{
+        background-image: url("images/comp1.jpg");
+        
+    }
+    32%{
+        
+        background-image: url("images/log.jpg");
+    }
+    50%{
+        background-image: url("images/mem1.jpg");
+        
+    }
+    70%{
+        background-image: url("images/log.jpg");
+        
+    }
+    100%{
+        background-image: url("images/meme2.jpg");
+        
+    }
+}
+#pic3{
+    animation-name: picture-three;
+    animation-duration: 3s;
+}
+@keyframes picture-three{
+    0%{
+        background-image: url("images/comp1.jpg");
+    }
+    16%{
+        background-image: url("images/log.jpg");
+    }
+    32%{
+        background-image: url("images/mem1.jpg");
+    }
+    50%{
+        background-image: url("images/log.jpg");
+    }
+    70%{
+        background-image: url("images/meme2.jpg");
+    }
+    100%{
+        background-image: url("images/comp2.jpg");
+    }
+}
+#pic4{
+    animation-name: picture-four;
+    animation-duration: 3s;
+}
+@keyframes picture-four{
+    0%{
+        background-image: url("images/comp1.jpg");
+    }
+    16%{
+        background-image: url("images/log.jpg");
+    }
+    32%{
+        background-image: url("images/mem1.jpg");
+    }
+    50%{
+        background-image: url("images/log.jpg");
+    }
+    70%{
+        background-image: url("images/meme2.jpg");
+    }
+    100%{
+        background-image: url("images/comp2.jpg");
+    }
+}
+#pic5{
+    animation-name: picture-five;
+    animation-duration: 3s;
+}
+@keyframes picture-five{
+    0%{
+        background-image: url("images/comp1.jpg");
+    }
+    16%{
+        background-image: url("images/log.jpg");
+    }
+    32%{
+        background-image: url("images/mem1.jpg");
+    }
+    50%{
+        background-image: url("images/log.jpg");
+    }
+    70%{
+        background-image: url("images/meme2.jpg");
+    }
+    100%{
+        background-image: url("images/comp2.jpg");
+    }
+}
+#pic6{
+    animation-name: picture-six;
+    animation-duration: 3s;
+}
+@keyframes picture-six{
+    0%{
+        background-image: url("images/comp1.jpg");
+    }
+    16%{
+        background-image: url("images/log.jpg");
+    }
+    32%{
+        background-image: url("images/mem1.jpg");
+    }
+    50%{
+        background-image: url("images/log.jpg");
+    }
+    70%{
+        background-image: url("images/meme2.jpg");
+    }
+    100%{
+        background-image: url("images/comp2.jpg");
+    }
+}
