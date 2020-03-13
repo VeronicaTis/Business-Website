@@ -1,3 +1,9 @@
+@charset "UTF-8";
+@font-face{
+    font-family: 'Gnaw';
+    src: url('Fonts/Gnaw FREE.ttf');
+    src: url('Fonts/Gnaw FREE.ttf') format('truetype');
+}
 .grid-container{
     display:grid;
     grid-template-columns: 25% 50% 25%;
@@ -8,153 +14,206 @@
     grid-column-end:4;
     grid-row-start:1;
     grid-row-end:2;
+    background-image: url("../images/headb.png");
+
+}
+.head img{
+    justify-content: center;
+
+}
+.navigation{
+    
 }
 #pic1{
+    grid-column-start:1;
+    grid-column-end:2;
+    grid-row-start:3;
+    grid-row-end:4;
+    color:transparent;
+    background-size: 100%;
+    animation-iteration-count: infinite;
     animation-name: picture-one;
-    animation-duration: 3s;
+    animation-duration: 8s;
 }
 @keyframes picture-one{
     0%{
-        background-image: url("images/comp1.jpg");
+        background-image: url("../images/comp1.jpg");
     }
     16%{
-        background-image: url("images/log.jpg");
+        background-image: url("../images/log.jpg");
     }
     32%{
-        background-image: url("images/mem1.jpg");
+        background-image: url("../images/meme1.jpg");
     }
     50%{
-        background-image: url("images/log.jpg");
+        background-image: url("../images/log.jpg");
     }
     70%{
-        background-image: url("images/meme2.jpg");
+        background-image: url("../images/meme2.jpg");
     }
     100%{
-        background-image: url("images/comp2.jpg");
+        background-image: url("../images/comp2.jpg");
     }
 }
 #pic2{
+    grid-column-start:1;
+    grid-column-end:2;
+    grid-row-start:4;
+    grid-row-end:5;
+    color:transparent;
+    animation-iteration-count: infinite;
     animation-name: picture-two;
-    animation-duration: 3s;
+    animation-duration: 8s;
 }
 @keyframes picture-two{
     0%{
-        background-image: url("images/comp2.jpg");
+        background-image: url("../images/comp2.jpg");
     }
     16%{
-        background-image: url("images/comp1.jpg");
+        background-image: url("../images/comp1.jpg");
         
     }
     32%{
         
-        background-image: url("images/log.jpg");
+        background-image: url("../images/log.jpg");
     }
     50%{
-        background-image: url("images/mem1.jpg");
+        background-image: url("../images/meme1.jpg");
         
     }
     70%{
-        background-image: url("images/log.jpg");
+        background-image: url("../images/log.jpg");
         
     }
     100%{
-        background-image: url("images/meme2.jpg");
+        background-image: url("../images/meme2.jpg");
         
     }
 }
 #pic3{
+    grid-column-start:1;
+    grid-column-end:2;
+    grid-row-start:5;
+    grid-row-end:6;
+    color:transparent;
+    animation-iteration-count: infinite;
     animation-name: picture-three;
-    animation-duration: 3s;
+    animation-duration: 8s;
 }
 @keyframes picture-three{
     0%{
-        background-image: url("images/comp1.jpg");
+        background-image: url("../images/comp1.jpg");
     }
     16%{
-        background-image: url("images/log.jpg");
+        background-image: url("../images/log.jpg");
     }
     32%{
-        background-image: url("images/mem1.jpg");
+        background-image: url("../images/meme1.jpg");
     }
     50%{
-        background-image: url("images/log.jpg");
+        background-image: url("../images/log.jpg");
     }
     70%{
-        background-image: url("images/meme2.jpg");
+        background-image: url("../images/meme2.jpg");
     }
     100%{
-        background-image: url("images/comp2.jpg");
+        background-image: url("../images/comp2.jpg");
     }
 }
 #pic4{
+    grid-column-start:3;
+    grid-column-end:4;
+    grid-row-start:3;
+    grid-row-end:4;
+    color:transparent;
+    animation-iteration-count: infinite;
     animation-name: picture-four;
-    animation-duration: 3s;
+    animation-duration: 8s;
 }
 @keyframes picture-four{
     0%{
-        background-image: url("images/comp1.jpg");
+        background-image: url("../images/comp1.jpg");
     }
     16%{
-        background-image: url("images/log.jpg");
+        background-image: url("../images/log.jpg");
     }
     32%{
-        background-image: url("images/mem1.jpg");
+        background-image: url("../images/meme1.jpg");
     }
     50%{
-        background-image: url("images/log.jpg");
+        background-image: url("../images/log.jpg");
     }
     70%{
-        background-image: url("images/meme2.jpg");
+        background-image: url("../images/meme2.jpg");
     }
     100%{
-        background-image: url("images/comp2.jpg");
+        background-image: url("../images/comp2.jpg");
     }
 }
 #pic5{
+    grid-column-start:3;
+    grid-column-end:4;
+    grid-row-start:4;
+    grid-row-end:5;
+    color:transparent;
+    animation-iteration-count: infinite;
     animation-name: picture-five;
-    animation-duration: 3s;
+    animation-duration: 8s;
 }
 @keyframes picture-five{
     0%{
-        background-image: url("images/comp1.jpg");
+        background-image: url("../images/comp1.jpg");
     }
     16%{
-        background-image: url("images/log.jpg");
+        background-image: url("../images/log.jpg");
     }
     32%{
-        background-image: url("images/mem1.jpg");
+        background-image: url("../images/meme1.jpg");
     }
     50%{
-        background-image: url("images/log.jpg");
+        background-image: url("../images/log.jpg");
     }
     70%{
-        background-image: url("images/meme2.jpg");
+        background-image: url("../images/meme2.jpg");
     }
     100%{
-        background-image: url("images/comp2.jpg");
+        background-image: url("../images/comp2.jpg");
     }
 }
 #pic6{
+    grid-column-start:3;
+    grid-column-end:4;
+    grid-row-start:5;
+    grid-row-end:6;
+    color:transparent;
+    animation-iteration-count: infinite;
     animation-name: picture-six;
-    animation-duration: 3s;
+    animation-duration: 8s;
 }
 @keyframes picture-six{
     0%{
-        background-image: url("images/comp1.jpg");
+        background-image: url("../images/comp1.jpg");
     }
     16%{
-        background-image: url("images/log.jpg");
+        background-image: url("../images/log.jpg");
     }
     32%{
-        background-image: url("images/mem1.jpg");
+        background-image: url("../images/meme1.jpg");
     }
     50%{
-        background-image: url("images/log.jpg");
+        background-image: url("../images/log.jpg");
     }
     70%{
-        background-image: url("images/meme2.jpg");
+        background-image: url("../images/meme2.jpg");
     }
     100%{
-        background-image: url("images/comp2.jpg");
+        background-image: url("../images/comp2.jpg");
     }
+}
+.words{
+    grid-column-start:2;
+    grid-column-end:3;
+    grid-row-start:3;
+    grid-row-end:6;
+    font-family: 'Gnaw';
 }
