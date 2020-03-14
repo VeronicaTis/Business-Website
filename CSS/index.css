@@ -7,7 +7,8 @@
 .grid-container{
     display:grid;
     grid-template-columns: 25% 50% 25%;
-    grid-template-rows: 13% 7% 22% 22% 22% auto;
+    grid-template-rows: 17% 3% 22% 22% 22% auto;
+    margin:0px;
 }
 .head{
     grid-column-start:1;
@@ -15,14 +16,35 @@
     grid-row-start:1;
     grid-row-end:2;
     background-image: url("../images/headb.png");
-
+    text-align:center;
 }
-.head img{
+.head > img{
+    text-align:center;
+    align-content: center;
     justify-content: center;
-
+    height: 100%;
 }
 .navigation{
-    
+    grid-column-start:1;
+    grid-column-end:4;
+    grid-row-start:2;
+    grid-row-end:3;
+    background-color:rgb(230, 0, 0);
+    color:white;
+    text-align:right;
+    font-weight: bolder;
+    font-size: 20px;
+    padding-right: 10px;
+    box-shadow: 0 4px 2px -2px gray;
+    z-index:2;
+    position: -webkit-sticky;
+    position: sticky;
+    top:0;
+}
+.navigation a{
+    text-decoration:none;
+    color:white;
+    box-shadow: 0 4px 2px -2px orange;
 }
 #pic1{
     grid-column-start:1;
@@ -37,22 +59,22 @@
 }
 @keyframes picture-one{
     0%{
-        background-image: url("../images/comp1.jpg");
+        background-image: url("../images/comp2.jpg");
     }
     16%{
-        background-image: url("../images/log.jpg");
+        background-image: url("../images/eat.jpg");
     }
     32%{
-        background-image: url("../images/meme1.jpg");
+        background-image: url("../images/swim.jpg");
     }
     50%{
         background-image: url("../images/log.jpg");
     }
     70%{
-        background-image: url("../images/meme2.jpg");
+        background-image: url("../images/game.jpg");
     }
     100%{
-        background-image: url("../images/comp2.jpg");
+        background-image: url("../images/soccer.jpg");
     }
 }
 #pic2{
@@ -64,21 +86,22 @@
     animation-iteration-count: infinite;
     animation-name: picture-two;
     animation-duration: 8s;
+    background-size:100%;
 }
 @keyframes picture-two{
     0%{
-        background-image: url("../images/comp2.jpg");
+        background-image: url("../images/soccer.jpg");
     }
     16%{
-        background-image: url("../images/comp1.jpg");
+        background-image: url("../images/comp2.jpg");
         
     }
     32%{
         
-        background-image: url("../images/log.jpg");
+        background-image: url("../images/eat.jpg");
     }
     50%{
-        background-image: url("../images/meme1.jpg");
+        background-image: url("../images/swim.jpg");
         
     }
     70%{
@@ -86,7 +109,7 @@
         
     }
     100%{
-        background-image: url("../images/meme2.jpg");
+        background-image: url("../images/game.jpg");
         
     }
 }
@@ -99,25 +122,26 @@
     animation-iteration-count: infinite;
     animation-name: picture-three;
     animation-duration: 8s;
+    background-size:100%;
 }
 @keyframes picture-three{
     0%{
-        background-image: url("../images/comp1.jpg");
+        background-image: url("../images/game.jpg");
     }
     16%{
-        background-image: url("../images/log.jpg");
+        background-image: url("../images/soccer.jpg");
     }
     32%{
-        background-image: url("../images/meme1.jpg");
+        background-image: url("../images/comp2.jpg");
     }
     50%{
-        background-image: url("../images/log.jpg");
+        background-image: url("../images/eat.jpg");
     }
     70%{
-        background-image: url("../images/meme2.jpg");
+        background-image: url("../images/swim.jpg");
     }
     100%{
-        background-image: url("../images/comp2.jpg");
+        background-image: url("../images/log.jpg");
     }
 }
 #pic4{
@@ -129,25 +153,26 @@
     animation-iteration-count: infinite;
     animation-name: picture-four;
     animation-duration: 8s;
+    background-size:100%;
 }
 @keyframes picture-four{
     0%{
-        background-image: url("../images/comp1.jpg");
+        background-image: url("../images/log.jpg");
     }
     16%{
-        background-image: url("../images/log.jpg");
+        background-image: url("../images/game.jpg");
     }
     32%{
-        background-image: url("../images/meme1.jpg");
+        background-image: url("../images/soccer.jpg");
     }
     50%{
-        background-image: url("../images/log.jpg");
+        background-image: url("../images/comp2.jpg");
     }
     70%{
-        background-image: url("../images/meme2.jpg");
+        background-image: url("../images/eat.jpg");
     }
     100%{
-        background-image: url("../images/comp2.jpg");
+        background-image: url("../images/swim.jpg");
     }
 }
 #pic5{
@@ -159,25 +184,26 @@
     animation-iteration-count: infinite;
     animation-name: picture-five;
     animation-duration: 8s;
+    background-size:100%;
 }
 @keyframes picture-five{
     0%{
-        background-image: url("../images/comp1.jpg");
+        background-image: url("../images/swim.jpg");
     }
     16%{
         background-image: url("../images/log.jpg");
     }
     32%{
-        background-image: url("../images/meme1.jpg");
+        background-image: url("../images/game.jpg");
     }
     50%{
-        background-image: url("../images/log.jpg");
+        background-image: url("../images/soccer.jpg");
     }
     70%{
-        background-image: url("../images/meme2.jpg");
+        background-image: url("../images/comp2.jpg");
     }
     100%{
-        background-image: url("../images/comp2.jpg");
+        background-image: url("../images/eat.jpg");
     }
 }
 #pic6{
@@ -189,22 +215,23 @@
     animation-iteration-count: infinite;
     animation-name: picture-six;
     animation-duration: 8s;
+    background-size:100%;
 }
 @keyframes picture-six{
     0%{
-        background-image: url("../images/comp1.jpg");
+        background-image: url("../images/eat.jpg");
     }
     16%{
-        background-image: url("../images/log.jpg");
+        background-image: url("../images/swim.jpg");
     }
     32%{
-        background-image: url("../images/meme1.jpg");
-    }
-    50%{
         background-image: url("../images/log.jpg");
     }
+    50%{
+        background-image: url("../images/game.jpg");
+    }
     70%{
-        background-image: url("../images/meme2.jpg");
+        background-image: url("../images/soccer.jpg");
     }
     100%{
         background-image: url("../images/comp2.jpg");
@@ -216,4 +243,5 @@
     grid-row-start:3;
     grid-row-end:6;
     font-family: 'Gnaw';
+    padding:7px;
 }
