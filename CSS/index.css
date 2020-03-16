@@ -245,4 +245,9 @@
     grid-row-end:6;
     font-family: 'Gnaw';
     padding:7px;
+   
+}
+#title{
+    text-align: center;
+    text-shadow: 1px 1px yellow, 2px 2px pink, 3px 3px blue;
 }
