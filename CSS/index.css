@@ -4,250 +4,550 @@
     src: url('Fonts/Gnaw FREE.ttf');
     src: url('Fonts/Gnaw FREE.ttf') format('truetype');
 }
-.grid-container{
-    display:grid;
-    grid-template-columns: 25% 50% 25%;
-    grid-template-rows: 17% 3% 22% 22% 22% auto;
-    margin:0px;
+@font-face{
+    font-family: 'Wonder';
+    src: url('Fonts/Wonderkids demo.ttf');
+    src: url('Fonts/Wonderkids demo.ttf') format('truetype');
 }
-.head{
-    grid-column-start:1;
-    grid-column-end:4;
-    grid-row-start:1;
-    grid-row-end:2;
-    background-image: url("../images/headb.png");
-    text-align:center;
+@font-face{
+    font-family: 'Funny';
+    src: url('Fonts/FunnyKid.ttf');
+    src: url('Fonts/FunnyKid.ttf') format('truetype');
 }
-.head > img{
-    text-align:center;
-    align-content: center;
-    justify-content: center;
-    height: 100%;
+@font-face{
+    font-family: 'kidz';
+    src: url('Fonts/campkidz by ratticsassin.ttf');
+    src: url('Fonts/campkidz by ratticsassin.ttf') format('truetype');
 }
-.navigation{
-    grid-column-start:1;
-    grid-column-end:4;
-    grid-row-start:2;
-    grid-row-end:3;
-    background-color:rgb(230, 0, 0);
-    color:white;
-    text-align:right;
-    font-weight: bolder;
-    font-size: 20px;
-    padding-right: 10px;
-    padding-top: 5px;
-    box-shadow: 0 4px 2px -2px gray;
-    z-index:2;
-    position: -webkit-sticky;
-    position: sticky;
-    top:0;
+@font-face{
+    font-family: 'Star';
+    src: url('Fonts/StarTrack.ttf');
+    src: url('Fonts/StarTrack.ttf') format('truetype');
 }
-.navigation a{
-    text-decoration:none;
-    color:white;
-    box-shadow: 0 4px 2px -2px orange;
+@font-face{
+    font-family: 'Mont';
+    src: url('Fonts/Monterado.ttf');
+    src: url('Fonts/Monterado.ttf') format('truetype');
 }
-#pic1{
-    grid-column-start:1;
-    grid-column-end:2;
-    grid-row-start:3;
-    grid-row-end:4;
-    color:transparent;
-    background-size: 100%;
-    animation-iteration-count: infinite;
-    animation-name: picture-one;
-    animation-duration: 8s;
+@font-face{
+    font-family:'Molly';
+    src: url('Fonts/Molly Jack.ttf');
+    src: url('Fonts/Molly Jack.ttf') format('truetype');
 }
-@keyframes picture-one{
-    0%{
-        background-image: url("../images/comp2.jpg");
+@media only screen and (max-width: 600px){
+
+}
+@media only screen and (min-width: 601px) and (max-width: 800px){
+
+}
+@media only screen and (min-width: 800px) and (max-width: 1200px){
+    .grid-container{
+        display:grid;
+        grid-template-columns: 25% 50% 25%;
+        grid-template-rows: 17% 3% 22% 22% 22% auto;
+        margin:0px;
     }
-    16%{
-        background-image: url("../images/eat.jpg");
+    .head{
+        grid-column-start:1;
+        grid-column-end:4;
+        grid-row-start:1;
+        grid-row-end:2;
+        background-image: url("../images/headb.png");
+        text-align:center;
     }
-    32%{
-        background-image: url("../images/swim.jpg");
+    .head > img{
+        text-align:center;
+        align-content: center;
+        justify-content: center;
+        height: 100%;
     }
-    50%{
-        background-image: url("../images/log.jpg");
+    .navigation{
+        grid-column-start:1;
+        grid-column-end:4;
+        grid-row-start:2;
+        grid-row-end:3;
+        background-color:rgb(230, 0, 0);
+        color:white;
+        text-align:right;
+        font-weight: bolder;
+        font-size: 20px;
+        padding-right: 10px;
+        padding-top: 5px;
+        box-shadow: 0 4px 2px -2px gray;
+        z-index:2;
+        position: -webkit-sticky;
+        position: sticky;
+        top:0;
     }
-    70%{
-        background-image: url("../images/game.jpg");
+    .navigation a{
+        text-decoration:none;
+        color:white;
+        box-shadow: 0 4px 2px -2px orange;
     }
-    100%{
-        background-image: url("../images/soccer.jpg");
+    #pic1{
+        grid-column-start:1;
+        grid-column-end:2;
+        grid-row-start:3;
+        grid-row-end:4;
+        color:transparent;
+        background-size: 100%;
+        background-repeat: round;
+        animation-iteration-count: infinite;
+        animation-name: picture-one;
+        animation-duration: 30s;
+    }
+    @keyframes picture-one{
+        0%{
+            background-image: url("../images/comp2.jpg");
+        }
+        16%{
+            background-image: url("../images/eat.jpg");
+        }
+        32%{
+            background-image: url("../images/swim.jpg");
+        }
+        50%{
+            background-image: url("../images/log.jpg");
+        }
+        70%{
+            background-image: url("../images/game.jpg");
+        }
+        100%{
+            background-image: url("../images/soccer.jpg");
+        }
+    }
+    #pic2{
+        grid-column-start:1;
+        grid-column-end:2;
+        grid-row-start:4;
+        grid-row-end:5;
+        color:transparent;
+        animation-iteration-count: infinite;
+        animation-name: picture-two;
+        animation-duration: 30s;
+        background-size:100%;
+        background-repeat: round;
+    }
+    @keyframes picture-two{
+        0%{
+            background-image: url("../images/soccer.jpg");
+        }
+        16%{
+            background-image: url("../images/comp2.jpg");
+            
+        }
+        32%{
+            
+            background-image: url("../images/eat.jpg");
+        }
+        50%{
+            background-image: url("../images/swim.jpg");
+            
+        }
+        70%{
+            background-image: url("../images/log.jpg");
+            
+        }
+        100%{
+            background-image: url("../images/game.jpg");
+            
+        }
+    }
+    #pic3{
+        grid-column-start:1;
+        grid-column-end:2;
+        grid-row-start:5;
+        grid-row-end:6;
+        color:transparent;
+        animation-iteration-count: infinite;
+        animation-name: picture-three;
+        animation-duration: 30s;
+        background-size:100%;
+        background-repeat: round;
+    }
+    @keyframes picture-three{
+        0%{
+            background-image: url("../images/game.jpg");
+        }
+        16%{
+            background-image: url("../images/soccer.jpg");
+        }
+        32%{
+            background-image: url("../images/comp2.jpg");
+        }
+        50%{
+            background-image: url("../images/eat.jpg");
+        }
+        70%{
+            background-image: url("../images/swim.jpg");
+        }
+        100%{
+            background-image: url("../images/log.jpg");
+        }
+    }
+    #pic4{
+        grid-column-start:3;
+        grid-column-end:4;
+        grid-row-start:3;
+        grid-row-end:4;
+        color:transparent;
+        animation-iteration-count: infinite;
+        animation-name: picture-four;
+        animation-duration: 30s;
+        background-size:100%;
+        background-repeat: round;
+    }
+    @keyframes picture-four{
+        0%{
+            background-image: url("../images/log.jpg");
+        }
+        16%{
+            background-image: url("../images/game.jpg");
+        }
+        32%{
+            background-image: url("../images/soccer.jpg");
+        }
+        50%{
+            background-image: url("../images/comp2.jpg");
+        }
+        70%{
+            background-image: url("../images/eat.jpg");
+        }
+        100%{
+            background-image: url("../images/swim.jpg");
+        }
+    }
+    #pic5{
+        grid-column-start:3;
+        grid-column-end:4;
+        grid-row-start:4;
+        grid-row-end:5;
+        color:transparent;
+        animation-iteration-count: infinite;
+        animation-name: picture-five;
+        animation-duration: 30s;
+        background-size:100%;
+        background-repeat: round;
+    }
+    @keyframes picture-five{
+        0%{
+            background-image: url("../images/swim.jpg");
+        }
+        16%{
+            background-image: url("../images/log.jpg");
+        }
+        32%{
+            background-image: url("../images/game.jpg");
+        }
+        50%{
+            background-image: url("../images/soccer.jpg");
+        }
+        70%{
+            background-image: url("../images/comp2.jpg");
+        }
+        100%{
+            background-image: url("../images/eat.jpg");
+        }
+    }
+    #pic6{
+        grid-column-start:3;
+        grid-column-end:4;
+        grid-row-start:5;
+        grid-row-end:6;
+        color:transparent;
+        animation-iteration-count: infinite;
+        animation-name: picture-six;
+        animation-duration: 30s;
+        background-size:100%;
+        background-repeat: round;
+    }
+    @keyframes picture-six{
+        0%{
+            background-image: url("../images/eat.jpg");
+        }
+        16%{
+            background-image: url("../images/swim.jpg");
+        }
+        32%{
+            background-image: url("../images/log.jpg");
+        }
+        50%{
+            background-image: url("../images/game.jpg");
+        }
+        70%{
+            background-image: url("../images/soccer.jpg");
+        }
+        100%{
+            background-image: url("../images/comp2.jpg");
+        }
+    }
+    .words{
+        grid-column-start:2;
+        grid-column-end:3;
+        grid-row-start:3;
+        grid-row-end:6;
+        font-family: 'Molly';
+        padding:7px;
+    
+    }
+    #title{
+        text-align: center;
+        text-shadow: 1px 1px yellow, 2px 2px pink, 3px 3px blue;
     }
 }
-#pic2{
-    grid-column-start:1;
-    grid-column-end:2;
-    grid-row-start:4;
-    grid-row-end:5;
-    color:transparent;
-    animation-iteration-count: infinite;
-    animation-name: picture-two;
-    animation-duration: 8s;
-    background-size:100%;
-}
-@keyframes picture-two{
-    0%{
-        background-image: url("../images/soccer.jpg");
+/*===================================================================================================================================================*/
+@media only screen and (min-width: 1200px){
+    .grid-container{
+        display:grid;
+        grid-template-columns: 25% 50% 25%;
+        grid-template-rows: 17% 3% 22% 22% 22% auto;
+        margin:0px;
     }
-    16%{
-        background-image: url("../images/comp2.jpg");
-        
+    .head{
+        grid-column-start:1;
+        grid-column-end:4;
+        grid-row-start:1;
+        grid-row-end:2;
+        background-image: url("../images/headb.png");
+        text-align:center;
     }
-    32%{
-        
-        background-image: url("../images/eat.jpg");
+    .head > img{
+        text-align:center;
+        align-content: center;
+        justify-content: center;
+        height: 100%;
     }
-    50%{
-        background-image: url("../images/swim.jpg");
-        
+    .navigation{
+        grid-column-start:1;
+        grid-column-end:4;
+        grid-row-start:2;
+        grid-row-end:3;
+        background-color:rgb(230, 0, 0);
+        color:white;
+        text-align:right;
+        font-weight: bolder;
+        font-size: 20px;
+        padding-right: 10px;
+        padding-top: 5px;
+        box-shadow: 0 4px 2px -2px gray;
+        z-index:2;
+        position: -webkit-sticky;
+        position: sticky;
+        top:0;
     }
-    70%{
-        background-image: url("../images/log.jpg");
-        
+    .navigation a{
+        text-decoration:none;
+        color:white;
+        box-shadow: 0 4px 2px -2px orange;
     }
-    100%{
-        background-image: url("../images/game.jpg");
-        
+    #pic1{
+        grid-column-start:1;
+        grid-column-end:2;
+        grid-row-start:3;
+        grid-row-end:4;
+        color:transparent;
+        background-size: 100%;
+        background-repeat: round;
+        animation-iteration-count: infinite;
+        animation-name: picture-one;
+        animation-duration: 15s;
     }
-}
-#pic3{
-    grid-column-start:1;
-    grid-column-end:2;
-    grid-row-start:5;
-    grid-row-end:6;
-    color:transparent;
-    animation-iteration-count: infinite;
-    animation-name: picture-three;
-    animation-duration: 8s;
-    background-size:100%;
-}
-@keyframes picture-three{
-    0%{
-        background-image: url("../images/game.jpg");
+    @keyframes picture-one{
+        0%{
+            background-image: url("../images/comp2.jpg");
+        }
+        16%{
+            background-image: url("../images/eat.jpg");
+        }
+        32%{
+            background-image: url("../images/swim.jpg");
+        }
+        50%{
+            background-image: url("../images/log.jpg");
+        }
+        70%{
+            background-image: url("../images/game.jpg");
+        }
+        100%{
+            background-image: url("../images/soccer.jpg");
+        }
     }
-    16%{
-        background-image: url("../images/soccer.jpg");
+    #pic2{
+        grid-column-start:1;
+        grid-column-end:2;
+        grid-row-start:4;
+        grid-row-end:5;
+        color:transparent;
+        animation-iteration-count: infinite;
+        animation-name: picture-two;
+        animation-duration:15s;
+        background-size:100%;
+        background-repeat: round;
     }
-    32%{
-        background-image: url("../images/comp2.jpg");
+    @keyframes picture-two{
+        0%{
+            background-image: url("../images/soccer.jpg");
+        }
+        16%{
+            background-image: url("../images/comp2.jpg");
+            
+        }
+        32%{
+            
+            background-image: url("../images/eat.jpg");
+        }
+        50%{
+            background-image: url("../images/swim.jpg");
+            
+        }
+        70%{
+            background-image: url("../images/log.jpg");
+            
+        }
+        100%{
+            background-image: url("../images/game.jpg");
+            
+        }
     }
-    50%{
-        background-image: url("../images/eat.jpg");
+    #pic3{
+        grid-column-start:1;
+        grid-column-end:2;
+        grid-row-start:5;
+        grid-row-end:6;
+        color:transparent;
+        animation-iteration-count: infinite;
+        animation-name: picture-three;
+        animation-duration: 15s;
+        background-size:100%;
+        background-repeat: round;
     }
-    70%{
-        background-image: url("../images/swim.jpg");
+    @keyframes picture-three{
+        0%{
+            background-image: url("../images/game.jpg");
+        }
+        16%{
+            background-image: url("../images/soccer.jpg");
+        }
+        32%{
+            background-image: url("../images/comp2.jpg");
+        }
+        50%{
+            background-image: url("../images/eat.jpg");
+        }
+        70%{
+            background-image: url("../images/swim.jpg");
+        }
+        100%{
+            background-image: url("../images/log.jpg");
+        }
     }
-    100%{
-        background-image: url("../images/log.jpg");
+    #pic4{
+        grid-column-start:3;
+        grid-column-end:4;
+        grid-row-start:3;
+        grid-row-end:4;
+        color:transparent;
+        animation-iteration-count: infinite;
+        animation-name: picture-four;
+        animation-duration: 15s;
+        background-size:100%;
+        background-repeat: round;
     }
-}
-#pic4{
-    grid-column-start:3;
-    grid-column-end:4;
-    grid-row-start:3;
-    grid-row-end:4;
-    color:transparent;
-    animation-iteration-count: infinite;
-    animation-name: picture-four;
-    animation-duration: 8s;
-    background-size:100%;
-}
-@keyframes picture-four{
-    0%{
-        background-image: url("../images/log.jpg");
+    @keyframes picture-four{
+        0%{
+            background-image: url("../images/log.jpg");
+        }
+        16%{
+            background-image: url("../images/game.jpg");
+        }
+        32%{
+            background-image: url("../images/soccer.jpg");
+        }
+        50%{
+            background-image: url("../images/comp2.jpg");
+        }
+        70%{
+            background-image: url("../images/eat.jpg");
+        }
+        100%{
+            background-image: url("../images/swim.jpg");
+        }
     }
-    16%{
-        background-image: url("../images/game.jpg");
+    #pic5{
+        grid-column-start:3;
+        grid-column-end:4;
+        grid-row-start:4;
+        grid-row-end:5;
+        color:transparent;
+        animation-iteration-count: infinite;
+        animation-name: picture-five;
+        animation-duration: 15s;
+        background-size:100%;
+        background-repeat: round;
     }
-    32%{
-        background-image: url("../images/soccer.jpg");
+    @keyframes picture-five{
+        0%{
+            background-image: url("../images/swim.jpg");
+        }
+        16%{
+            background-image: url("../images/log.jpg");
+        }
+        32%{
+            background-image: url("../images/game.jpg");
+        }
+        50%{
+            background-image: url("../images/soccer.jpg");
+        }
+        70%{
+            background-image: url("../images/comp2.jpg");
+        }
+        100%{
+            background-image: url("../images/eat.jpg");
+        }
     }
-    50%{
-        background-image: url("../images/comp2.jpg");
+    #pic6{
+        grid-column-start:3;
+        grid-column-end:4;
+        grid-row-start:5;
+        grid-row-end:6;
+        color:transparent;
+        animation-iteration-count: infinite;
+        animation-name: picture-six;
+        animation-duration: 15s;
+        background-size:100%;
+        background-repeat: round;
     }
-    70%{
-        background-image: url("../images/eat.jpg");
+    @keyframes picture-six{
+        0%{
+            background-image: url("../images/eat.jpg");
+        }
+        16%{
+            background-image: url("../images/swim.jpg");
+        }
+        32%{
+            background-image: url("../images/log.jpg");
+        }
+        50%{
+            background-image: url("../images/game.jpg");
+        }
+        70%{
+            background-image: url("../images/soccer.jpg");
+        }
+        100%{
+            background-image: url("../images/comp2.jpg");
+        }
     }
-    100%{
-        background-image: url("../images/swim.jpg");
+    .words{
+        grid-column-start:2;
+        grid-column-end:3;
+        grid-row-start:3;
+        grid-row-end:6;
+        font-family: 'Molly';
+        padding:7px;
+        font-size: 20px;
     }
-}
-#pic5{
-    grid-column-start:3;
-    grid-column-end:4;
-    grid-row-start:4;
-    grid-row-end:5;
-    color:transparent;
-    animation-iteration-count: infinite;
-    animation-name: picture-five;
-    animation-duration: 8s;
-    background-size:100%;
-}
-@keyframes picture-five{
-    0%{
-        background-image: url("../images/swim.jpg");
+    #title{
+        text-align: center;
+        text-shadow: 1px 1px yellow, 2px 2px pink, 3px 3px blue;
     }
-    16%{
-        background-image: url("../images/log.jpg");
-    }
-    32%{
-        background-image: url("../images/game.jpg");
-    }
-    50%{
-        background-image: url("../images/soccer.jpg");
-    }
-    70%{
-        background-image: url("../images/comp2.jpg");
-    }
-    100%{
-        background-image: url("../images/eat.jpg");
-    }
-}
-#pic6{
-    grid-column-start:3;
-    grid-column-end:4;
-    grid-row-start:5;
-    grid-row-end:6;
-    color:transparent;
-    animation-iteration-count: infinite;
-    animation-name: picture-six;
-    animation-duration: 8s;
-    background-size:100%;
-}
-@keyframes picture-six{
-    0%{
-        background-image: url("../images/eat.jpg");
-    }
-    16%{
-        background-image: url("../images/swim.jpg");
-    }
-    32%{
-        background-image: url("../images/log.jpg");
-    }
-    50%{
-        background-image: url("../images/game.jpg");
-    }
-    70%{
-        background-image: url("../images/soccer.jpg");
-    }
-    100%{
-        background-image: url("../images/comp2.jpg");
-    }
-}
-.words{
-    grid-column-start:2;
-    grid-column-end:3;
-    grid-row-start:3;
-    grid-row-end:6;
-    font-family: 'Gnaw';
-    padding:7px;
-   
-}
-#title{
-    text-align: center;
-    text-shadow: 1px 1px yellow, 2px 2px pink, 3px 3px blue;
 }
