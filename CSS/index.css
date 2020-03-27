@@ -34,12 +34,158 @@
     src: url('Fonts/Molly Jack.ttf');
     src: url('Fonts/Molly Jack.ttf') format('truetype');
 }
+/*==========PHONE SCREEN====================================================================================================================================================*/
 @media only screen and (max-width: 600px){
-
+    .grid-container{
+        display:grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 5% 2% 66% auto;
+        margin:0px;
+    }
+    .head{
+        grid-column-start:1;
+        grid-column-end:2;
+        grid-row-start:1;
+        grid-row-end:2;
+        background-image: url("../images/headb.png");
+        text-align:center;
+    }
+    .head > img{
+        text-align:center;
+        align-content: center;
+        justify-content: center;
+        height: 100%;
+    }
+    .navigation{
+        grid-column-start:1;
+        grid-column-end:2;
+        grid-row-start:2;
+        grid-row-end:3;
+        background-color:rgb(230, 0, 0);
+        color:white;
+        text-align:right;
+        font-weight: bolder;
+        font-size: 17px;
+        padding-right: 10px;
+        padding-top: 5px;
+        box-shadow: 0 4px 2px -2px gray;
+        z-index:2;
+        position: -webkit-sticky;
+        position: sticky;
+        top:0;
+    }
+    .navigation a{
+        text-decoration:none;
+        color:white;
+        box-shadow: 0 4px 2px -2px orange;
+    }
+    .words{
+        grid-column-start:1;
+        grid-column-end:2;
+        grid-row-start:3;
+        grid-row-end:4;
+        font-family: 'Molly';
+        padding:7px;
+    
+    }
+    #title{
+        text-align: center;
+        text-shadow: 1px 1px yellow, 2px 2px pink, 3px 3px blue;
+    }
+    .foot{
+        grid-column-start:1;
+        grid-column-end:2;
+        grid-row-start:4;
+        grid-row-end:5;
+        display: inline-block;
+        font-family: 'Molly';
+        font-size: 30px;
+    }
+    .foot ul li{
+        list-style-type: none;
+        text-decoration: none;
+    }
+    .foot ul li a{
+        text-decoration: none;
+    }
 }
+/*===========VERTICAL TABLET SCREEN=======================================================================================================================================================*/
 @media only screen and (min-width: 601px) and (max-width: 800px){
-
+    .grid-container{
+        display:grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 10% 3% 66% auto;
+        margin:0px;
+    }
+    .head{
+        grid-column-start:1;
+        grid-column-end:2;
+        grid-row-start:1;
+        grid-row-end:2;
+        background-image: url("../images/headb.png");
+        text-align:center;
+    }
+    .head > img{
+        text-align:center;
+        align-content: center;
+        justify-content: center;
+        height: 100%;
+    }
+    .navigation{
+        grid-column-start:1;
+        grid-column-end:2;
+        grid-row-start:2;
+        grid-row-end:3;
+        background-color:rgb(230, 0, 0);
+        color:white;
+        text-align:right;
+        font-weight: bolder;
+        font-size: 20px;
+        padding-right: 10px;
+        padding-top: 5px;
+        box-shadow: 0 4px 2px -2px gray;
+        z-index:2;
+        position: -webkit-sticky;
+        position: sticky;
+        top:0;
+    }
+    .navigation a{
+        text-decoration:none;
+        color:white;
+        box-shadow: 0 4px 2px -2px orange;
+    }
+    .words{
+        grid-column-start:1;
+        grid-column-end:2;
+        grid-row-start:3;
+        grid-row-end:4;
+        font-family: 'Molly';
+        padding:7px;
+    
+    }
+    #title{
+        text-align: center;
+        text-shadow: 1px 1px yellow, 2px 2px pink, 3px 3px blue;
+    }
+    .foot{
+        grid-column-start:1;
+        grid-column-end:2;
+        grid-row-start:4;
+        grid-row-end:5;
+        display: inline-block;
+        font-family: 'Molly';
+        font-size: 30px;
+    }
+    .foot ul li{
+        list-style-type: none;
+        text-decoration: none;
+    }
+    .foot ul li a{
+        text-decoration: none;
+    }
+    
 }
+/*===========Tablet Landscape=================================================================================================================================================*/
 @media only screen and (min-width: 800px) and (max-width: 1200px){
     .grid-container{
         display:grid;
@@ -294,8 +440,33 @@
         text-align: center;
         text-shadow: 1px 1px yellow, 2px 2px pink, 3px 3px blue;
     }
+    
+    .foot{
+        grid-column-start:1;
+        grid-column-end:4;
+        grid-row-start:6;
+        grid-row-end:7;
+        display: inline-block;
+        font-family: 'Molly';
+        font-size: 30px;
+    }
+    .foot ul li{
+        list-style-type: none;
+        text-decoration: none;
+    }
+    .foot ul li a{
+        text-decoration: none;
+    }
+    #office{
+        float:left;
+        margin-right: 50px;
+    }
+    #media{
+        display: inline;
+        
+    }
 }
-/*===================================================================================================================================================*/
+/*==========COMPUTER SCREEN====================================================================================================================================================*/
 @media only screen and (min-width: 1200px){
     .grid-container{
         display:grid;
@@ -549,5 +720,29 @@
     #title{
         text-align: center;
         text-shadow: 1px 1px yellow, 2px 2px pink, 3px 3px blue;
+    }
+    .foot{
+        grid-column-start:1;
+        grid-column-end:4;
+        grid-row-start:6;
+        grid-row-end:7;
+        display: inline-block;
+        font-family: 'Molly';
+        font-size: 30px;
+    }
+    .foot ul li{
+        list-style-type: none;
+        text-decoration: none;
+    }
+    .foot ul li a{
+        text-decoration: none;
+    }
+    #office{
+        float:left;
+        margin-right: 50px;
+    }
+    #media{
+        display: inline;
+        
     }
 }
