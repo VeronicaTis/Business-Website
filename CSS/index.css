@@ -1,7 +1,9 @@
 @charset "UTF-8";
+/*All of the @font-faces are different types of fonts for the main article and footer,
+ there are a lot because I was choosing between the seven I decided to use Molly Font.*/
 @font-face{
-    font-family: 'Gnaw';
-    src: url('Fonts/Gnaw FREE.ttf');
+    font-family: 'Gnaw';/*This is the name you would give to the font you are using*/
+    src: url('Fonts/Gnaw FREE.ttf');/*You need a src for an @font-face, the src is the link to what font you are using, it is usually download and in your files*/
     src: url('Fonts/Gnaw FREE.ttf') format('truetype');
 }
 @font-face{
@@ -34,715 +36,730 @@
     src: url('Fonts/Molly Jack.ttf');
     src: url('Fonts/Molly Jack.ttf') format('truetype');
 }
-/*==========PHONE SCREEN====================================================================================================================================================*/
-@media only screen and (max-width: 600px){
-    .grid-container{
-        display:grid;
-        grid-template-columns: 100%;
-        grid-template-rows: 5% 2% 66% auto;
-        margin:0px;
+/*==========PHONE SCREEN=========this is the media query for when your screen is scaled to the size of a phone screen===========================================================================================================================================*/
+@media only screen and (max-width: 600px)/*Phone screen usually has a max of around 600px, so any screen with a width equal or lower than 600px will use the css below*/{
+    .grid-container{/*The grid-container is a class for the body in the html, like a table it lets you place elements in a certain spot*/
+        display:grid;/*The display makes your grid show up */
+        grid-template-columns: 100%;/*I did my measurments in percentage, I find it easier, This is making the html page only have one column*/
+        grid-template-rows: 5% 2% 66% auto;/*This one is making the html page have 4 rows */
+        margin:0px;/*Leaves zero spaces between the pages borders and the screen borders*/
     }
-    .head{
-        grid-column-start:1;
-        grid-column-end:2;
-        grid-row-start:1;
-        grid-row-end:2;
-        background-image: url("../images/headb.png");
-        text-align:center;
+    .head{/*This is the css for the banner that spans the top of the html page*/
+        grid-column-start:1;/*The vertical line where the column starts at of the section you want*/
+        grid-column-end:2;/*The vertical line where the column ends at of teh section you wnat*/
+        grid-row-start:1;/*The horizontal line where the rows starts at of the section you want*/
+        grid-row-end:2;/*The horizontal line where the row ends at of the section you want*/
+        background-image: url("../images/headb.png");/*Is an image that truns into the backgorund for this section only*/
+        text-align:center;/*Centered the logo image in the head section*/
     }
-    .head > img{
-        text-align:center;
-        align-content: center;
-        justify-content: center;
-        height: 100%;
+    .head > img{/*This is css only for the image inside the head class*/
+        text-align:center;/*Centered the logo image in the head section*/
+        align-content: center;/*Centered the logo image in the head section*/
+        justify-content: center;/*Centered the logo image in the head section*/
+        height: 100%;/*Having the height at 100% allows the image to have the sam eheight as its section*/
     }
-    .navigation{
-        grid-column-start:1;
-        grid-column-end:2;
-        grid-row-start:2;
-        grid-row-end:3;
-        background-color:rgb(230, 0, 0);
-        color:white;
-        text-align:right;
-        font-weight: bolder;
-        font-size: 17px;
-        padding-right: 10px;
-        padding-top: 5px;
-        box-shadow: 0 4px 2px -2px gray;
-        z-index:2;
+    #navigation{/*This is the css only for the nav bar*/
+        grid-column-start:1;/*The vertical line where the column starts at of the section you want*/
+        grid-column-end:2;/*The vertical line where the column ends at of teh section you wnat*/
+        grid-row-start:2;/*The horizontal line where the rows starts at of the section you want*/
+        grid-row-end:3;/*The horizontal line where the row ends at of the section you want*/
+        background-color:rgb(230, 0, 0);/*This is a background color for the nav bar*/
+        color:white;/*Turns the contents inside the nave bar white*/
+        text-align:right;/*Aligns the text in the nav bar to shift to the right side of the screen*/
+        font-weight: bolder;/*Boldens the text in the nav bar*/
+        font-size: 17px;/*Sizes the text in nav bar to be either bigger or smaller*/
+        padding-right: 10px;/*Allows you to make the words inside the nav bar be away from the right border edges of the nav bar*/
+        padding-top: 5px;/*Allows you to make the words inside the nav bar be away from the top border edges of the nav bar*/
+        
+        z-index:2;/*Makes the nav bar come to the top of all content on the page*/
         position: -webkit-sticky;
-        position: sticky;
-        top:0;
+        position: sticky;/*Makes teh nave bar stick to the top of the page like it is fixed but nly until you scroll past the nave bar*/
+        top:0;/*When the nav bar reaches the top there is zero space between the top of the page and the nav bar*/
     }
-    .navigation a{
-        text-decoration:none;
-        color:white;
-        box-shadow: 0 4px 2px -2px orange;
+    #navigation a{/*this is the css for the navagation links in teh nav*/
+        text-decoration:none;/*gets rid of the underline that the link comes wiht*/
+        color:white;/*Makes teh text in the links white*/
+        box-shadow: 0 4px 2px -2px orange;/*creates a box shadow for the links of the words*/
     }
-    .words{
-        grid-column-start:1;
-        grid-column-end:2;
-        grid-row-start:3;
-        grid-row-end:4;
-        font-family: 'Molly';
-        padding:7px;
+    .words{/*this is the css for the main article with words for the page*/
+        grid-column-start:1;/*The vertical line where the column starts at of the section you want*/
+        grid-column-end:2;/*The vertical line where the column ends at of teh section you wnat*/
+        grid-row-start:3;/*The horizontal line where the rows starts at of the section you want*/
+        grid-row-end:5;/*The horizontal line where the row ends at of the section you want*/
+        font-family: 'Molly';/*This is the type of font chosen for ell the text in the article*/
+        padding:7px;/*Allows you to make the words inside the nav bar be away from the border edges of the article*/
     
     }
-    #title{
-        text-align: center;
-        text-shadow: 1px 1px yellow, 2px 2px pink, 3px 3px blue;
+    #title{/*This is the css for the title ID tag in the article*/
+        text-align: center;/*Centered the text in the title ID section*/
+        text-shadow: 1px 1px yellow, 2px 2px pink, 3px 3px blue;/*Creates a shadow of different colors for the title text*/
     }
-    .foot{
-        grid-column-start:1;
-        grid-column-end:2;
-        grid-row-start:4;
-        grid-row-end:5;
-        display: inline-block;
-        font-family: 'Molly';
-        font-size: 30px;
+    .foot{/*this is the css for the footer section at teh bottom of the page*/
+        grid-column-start:1;/*The vertical line where the column starts at of the section you want*/
+        grid-column-end:2;/*The vertical line where the column ends at of teh section you wnat*/
+        grid-row-start:4;/*The horizontal line where the rows starts at of the section you want*/
+        grid-row-end:5;/*The horizontal line where the row ends at of the section you want*/
+        display: inline-block;/*Makes all teh differnt blocks of this section become in a horizontal line, lining up next to eachother*/
+        font-family: 'Molly';/*This is the type of font chosen for ell the text in the footer*/
+        font-size: 20px;/*Sizes the text in footer to be either bigger or smaller*/
+        background-color:rgb(240, 114, 213);/*This is a background color for the footer section*/
     }
-    .foot ul li{
-        list-style-type: none;
-        text-decoration: none;
+    .foot ul li{/*this is the css for the footer ordered list*/
+        list-style-type: none;/*Makes towards where the bullet points dont shwo*/
+        text-decoration: none;/*Makes the text in the footer have no decorations like under lines*/
     }
-    .foot ul li a{
-        text-decoration: none;
+    .foot ul li a{/*this is the css for the links inside of the footer*/
+        text-decoration: none;/*Makes the text in the footer have no decorations like under lines*/
     }
 }
 /*===========VERTICAL TABLET SCREEN=======================================================================================================================================================*/
-@media only screen and (min-width: 601px) and (max-width: 800px){
-    .grid-container{
-        display:grid;
-        grid-template-columns: 100%;
-        grid-template-rows: 10% 3% 66% auto;
-        margin:0px;
+@media only screen and (min-width: 601px) and (max-width: 800px){/*this is the css for all screen that have a width above 601px but lower than 800px*/
+    .grid-container{/*The grid-container is a class for the body in the html, like a table it lets you place elements in a certain spot*/
+        display:grid;/*The display makes your grid show up */
+        grid-template-columns: 100%;/*I did my measurments in percentage, I find it easier, This is making the html page only have one column*/
+        grid-template-rows: 5% 2% 66% auto;/*This one is making the html page have 4 rows */
+        margin:0px;/*Leaves zero spaces between the pages borders and the screen borders*/
     }
-    .head{
-        grid-column-start:1;
-        grid-column-end:2;
-        grid-row-start:1;
-        grid-row-end:2;
-        background-image: url("../images/headb.png");
-        text-align:center;
+    .head{/*This is the css for the banner that spans the top of the html page*/
+        grid-column-start:1;/*The vertical line where the column starts at of the section you want*/
+        grid-column-end:2;/*The vertical line where the column ends at of teh section you wnat*/
+        grid-row-start:1;/*The horizontal line where the rows starts at of the section you want*/
+        grid-row-end:2;/*The horizontal line where the row ends at of the section you want*/
+        background-image: url("../images/headb.png");/*Is an image that truns into the backgorund for this section only*/
+        text-align:center;/*Centered the logo image in the head section*/
     }
-    .head > img{
-        text-align:center;
-        align-content: center;
-        justify-content: center;
-        height: 100%;
+    .head > img{/*This is css only for the image inside the head class*/
+        text-align:center;/*Centered the logo image in the head section*/
+        align-content: center;/*Centered the logo image in the head section*/
+        justify-content: center;/*Centered the logo image in the head section*/
+        height: 100%;/*Having the height at 100% allows the image to have the sam eheight as its section*/
     }
-    .navigation{
-        grid-column-start:1;
-        grid-column-end:2;
-        grid-row-start:2;
-        grid-row-end:3;
-        background-color:rgb(230, 0, 0);
-        color:white;
-        text-align:right;
-        font-weight: bolder;
-        font-size: 20px;
-        padding-right: 10px;
-        padding-top: 5px;
-        box-shadow: 0 4px 2px -2px gray;
-        z-index:2;
+    #navigation{/*This is the css only for the nav bar*/
+        grid-column-start:1;/*The vertical line where the column starts at of the section you want*/
+        grid-column-end:2;/*The vertical line where the column ends at of teh section you wnat*/
+        grid-row-start:2;/*The horizontal line where the rows starts at of the section you want*/
+        grid-row-end:3;/*The horizontal line where the row ends at of the section you want*/
+        background-color:rgb(230, 0, 0);/*This is a background color for the nav bar*/
+        color:white;/*Turns the contents inside the nave bar white*/
+        text-align:right;/*Aligns the text in the nav bar to shift to the right side of the screen*/
+        font-weight: bolder;/*Boldens the text in the nav bar*/
+        font-size: 20px;/*Sizes the text in nav bar to be either bigger or smaller*/
+        padding-right: 10px;/*Allows you to make the words inside the nav bar be away from the right border edges of the nav bar*/
+        padding-top: 5px;/*Allows you to make the words inside the nav bar be away from the top border edges of the nav bar*/
+        
+        z-index:2;/*Makes the nav bar come to the top of all content on the page*/
         position: -webkit-sticky;
-        position: sticky;
-        top:0;
+        position: sticky;/*Makes teh nave bar stick to the top of the page like it is fixed but nly until you scroll past the nave bar*/
+        top:0;/*When the nav bar reaches the top there is zero space between the top of the page and the nav bar*/
     }
-    .navigation a{
-        text-decoration:none;
-        color:white;
-        box-shadow: 0 4px 2px -2px orange;
+    #navigation a{/*this is the css for the navagation links in teh nav*/
+        text-decoration:none;/*gets rid of the underline that the link comes wiht*/
+        color:white;/*Makes teh text in the links white*/
+        box-shadow: 0 4px 2px -2px orange;/*creates a box shadow for the links of the words*/
     }
-    .words{
-        grid-column-start:1;
-        grid-column-end:2;
-        grid-row-start:3;
-        grid-row-end:4;
-        font-family: 'Molly';
-        padding:7px;
+    .words{/*this is the css for the main article with words for the page*/
+        grid-column-start:1;/*The vertical line where the column starts at of the section you want*/
+        grid-column-end:2;/*The vertical line where the column ends at of teh section you wnat*/
+        grid-row-start:3;/*The horizontal line where the rows starts at of the section you want*/
+        grid-row-end:5;/*The horizontal line where the row ends at of the section you want*/
+        font-family: 'Molly';/*This is the type of font chosen for ell the text in the article*/
+        padding:7px;/*Allows you to make the words inside the nav bar be away from the border edges of the article*/
     
     }
-    #title{
-        text-align: center;
-        text-shadow: 1px 1px yellow, 2px 2px pink, 3px 3px blue;
+    #title{/*This is the css for the title ID tag in the article*/
+        text-align: center;/*Centered the text in the title ID section*/
+        text-shadow: 1px 1px yellow, 2px 2px pink, 3px 3px blue;/*Creates a shadow of different colors for the title text*/
     }
-    .foot{
-        grid-column-start:1;
-        grid-column-end:2;
-        grid-row-start:4;
-        grid-row-end:5;
-        display: inline-block;
-        font-family: 'Molly';
-        font-size: 30px;
+    .foot{/*this is the css for the footer section at teh bottom of the page*/
+        grid-column-start:1;/*The vertical line where the column starts at of the section you want*/
+        grid-column-end:2;/*The vertical line where the column ends at of teh section you wnat*/
+        grid-row-start:4;/*The horizontal line where the rows starts at of the section you want*/
+        grid-row-end:5;/*The horizontal line where the row ends at of the section you want*/
+        display: inline-block;/*Makes all teh differnt blocks of this section become in a horizontal line, lining up next to eachother*/
+        font-family: 'Molly';/*This is the type of font chosen for ell the text in the footer*/
+        font-size: 20px;/*Sizes the text in footer to be either bigger or smaller*/
+        background-color:rgb(240, 114, 213);/*This is a background color for the footer section*/
     }
-    .foot ul li{
-        list-style-type: none;
-        text-decoration: none;
+    .foot ul li{/*this is the css for the footer ordered list*/
+        list-style-type: none;/*Makes towards where the bullet points dont shwo*/
+        text-decoration: none;/*Makes the text in the footer have no decorations like under lines*/
     }
-    .foot ul li a{
-        text-decoration: none;
+    .foot ul li a{/*this is the css for the links inside of the footer*/
+        text-decoration: none;/*Makes the text in the footer have no decorations like under lines*/
     }
     
 }
 /*===========Tablet Landscape=================================================================================================================================================*/
-@media only screen and (min-width: 800px) and (max-width: 1200px){
-    .grid-container{
-        display:grid;
-        grid-template-columns: 25% 50% 25%;
-        grid-template-rows: 17% 3% 22% 22% 22% auto;
-        margin:0px;
+@media only screen and (min-width: 800px) and (max-width: 1200px){/*this is the css for all screen that have a width above 800px but lower than 1200px*/
+    .grid-container{/*The grid-container is a class for the body in the html, like a table it lets you place elements in a certain spot*/
+        display:grid;/*The display makes your grid show up */
+        grid-template-columns: 25% 50% 25%;/*I did my measurments in percentage, I find it easier, This is making the html page only have three column*/
+        grid-template-rows: 17% 3% 22% 22% 22% auto;/*This one is making the html page have 6 rows */
+        margin:0px;/*Leaves zero spaces between the pages borders and the screen borders*/
     }
     .head{
-        grid-column-start:1;
-        grid-column-end:4;
-        grid-row-start:1;
-        grid-row-end:2;
-        background-image: url("../images/headb.png");
-        text-align:center;
+        grid-column-start:1;/*The vertical line where the column starts at of the section you want*/
+        grid-column-end:4;/*The vertical line where the column ends at of teh section you wnat*/
+        grid-row-start:1;/*The horizontal line where the rows starts at of the section you want*/
+        grid-row-end:2;/*The horizontal line where the row ends at of the section you want*/
+        background-image: url("../images/headb.png");/*Is an image that truns into the backgorund for this section only*/
+        text-align:center;/*Centered the logo image in the head section*/
     }
     .head > img{
-        text-align:center;
-        align-content: center;
-        justify-content: center;
-        height: 100%;
+        text-align:center;/*Centered the logo image in the head section*/
+        align-content: center;/*Centered the logo image in the head section*/
+        justify-content: center;/*Centered the logo image in the head section*/
+        height: 100%;/*Having the height at 100% allows the image to have the sam eheight as its section*/
     }
-    .navigation{
-        grid-column-start:1;
-        grid-column-end:4;
-        grid-row-start:2;
-        grid-row-end:3;
-        background-color:rgb(230, 0, 0);
-        color:white;
-        text-align:right;
-        font-weight: bolder;
-        font-size: 20px;
-        padding-right: 10px;
-        padding-top: 5px;
-        box-shadow: 0 4px 2px -2px gray;
-        z-index:2;
+    #navigation{/*This is the css only for the nav bar*/
+        grid-column-start:1;/*The vertical line where the column starts at of the section you want*/
+        grid-column-end:4;/*The vertical line where the column ends at of teh section you wnat*/
+        grid-row-start:2;/*The horizontal line where the rows starts at of the section you want*/
+        grid-row-end:3;/*The horizontal line where the row ends at of the section you want*/
+        background-color:rgb(230, 0, 0);/*This is a background color for the nav bar*/
+        color:white;/*Turns the contents inside the nave bar white*/
+        text-align:right;/*Aligns the text in the nav bar to shift to the right side of the screen*/
+        font-weight: bolder;/*Boldens the text in the nav bar*/
+        font-size: 20px;/*Sizes the text in nav bar to be either bigger or smaller*/
+        padding-right: 10px;/*Allows you to make the words inside the nav bar be away from the right border edges of the nav bar*/
+        padding-top: 5px;/*Allows you to make the words inside the nav bar be away from the top border edges of the nav bar*/
+        
+        z-index:2;/*Makes the nav bar come to the top of all content on the page*/
         position: -webkit-sticky;
-        position: sticky;
-        top:0;
+        position: sticky;/*Makes teh nave bar stick to the top of the page like it is fixed but nly until you scroll past the nave bar*/
+        top:0;/*When the nav bar reaches the top there is zero space between the top of the page and the nav bar*/
     }
-    .navigation a{
-        text-decoration:none;
-        color:white;
-        box-shadow: 0 4px 2px -2px orange;
+    #navigation a{/*this is the css for the navagation links in teh nav*/
+        text-decoration:none;/*gets rid of the underline that the link comes wiht*/
+        color:white;/*Makes teh text in the links white*/
+        box-shadow: 0 4px 2px -2px orange;/*creates a box shadow for the links of the words*/
     }
-    #pic1{
-        grid-column-start:1;
-        grid-column-end:2;
-        grid-row-start:3;
-        grid-row-end:4;
-        color:transparent;
-        background-size: 100%;
-        background-repeat: round;
-        animation-iteration-count: infinite;
-        animation-name: picture-one;
-        animation-duration: 30s;
+    #pic1{/*This is the css for the left top picture changing section*/
+        grid-column-start:1;/*The vertical line where the column starts at of the section you want*/
+        grid-column-end:2;/*The vertical line where the column ends at of teh section you wnat*/
+        grid-row-start:3;/*The horizontal line where the rows starts at of the section you want*/
+        grid-row-end:4;/*The horizontal line where the row ends at of the section you want*/
+        color:transparent;/*Makes the text color in this section clear*/
+        background-size: 100%;/*Sizes the background image to the width and height of the section it is in*/
+        background-repeat: round;/*Stretches the image or repeats the image to fill the enitre section it is in*/
+        animation-iteration-count: infinite;/*Makes the animation of changing images infinite*/
+        animation-name: picture-one;/*Indicated which keyframe it is connected to*/
+        animation-duration: 15s;/*How long the animation is going for until it repeats*/
     }
-    @keyframes picture-one{
+    @keyframes picture-one{/*This is a list of all the pictures showing up at different time intervals represented by 
+        percentages when the animation is changing to each picture but only for this one section*/
         0%{
-            background-image: url("../images/comp2.jpg");
+            background-image: url("../images/comp2.jpg");/*first picture change and starting picture*/
         }
         16%{
-            background-image: url("../images/eat.jpg");
+            background-image: url("../images/eat.jpg");/*second picture change*/
         }
         32%{
-            background-image: url("../images/swim.jpg");
+            background-image: url("../images/swim.jpg");/*third picture change*/
         }
         50%{
-            background-image: url("../images/log.jpg");
+            background-image: url("../images/log.jpg");/*fourth picture change*/
         }
         70%{
-            background-image: url("../images/game.jpg");
+            background-image: url("../images/game.jpg");/*fifth picture change*/
         }
         100%{
-            background-image: url("../images/soccer.jpg");
+            background-image: url("../images/soccer.jpg");/*sixth picture change*/
         }
     }
-    #pic2{
-        grid-column-start:1;
-        grid-column-end:2;
-        grid-row-start:4;
-        grid-row-end:5;
-        color:transparent;
-        animation-iteration-count: infinite;
-        animation-name: picture-two;
-        animation-duration: 30s;
-        background-size:100%;
-        background-repeat: round;
+    #pic2{/*This is the css for the left middle picture changing section*/
+        grid-column-start:1;/*The vertical line where the column starts at of the section you want*/
+        grid-column-end:2;/*The vertical line where the column ends at of teh section you wnat*/
+        grid-row-start:4;/*The horizontal line where the rows starts at of the section you want*/
+        grid-row-end:5;/*The horizontal line where the row ends at of the section you want*/
+        color:transparent;/*Makes the text color in this section clear*/
+        background-size: 100%;/*Sizes the background image to the width and height of the section it is in*/
+        background-repeat: round;/*Stretches the image or repeats the image to fill the enitre section it is in*/
+        animation-iteration-count: infinite;/*Makes the animation of changing images infinite*/
+        animation-name: picture-two;/*Indicated which keyframe it is connected to*/
+        animation-duration: 15s;/*How long the animation is going for until it repeats*/
     }
-    @keyframes picture-two{
+    @keyframes picture-two{/*This is a list of all the pictures showing up at different time intervals represented by 
+        percentages when the animation is changing to each picture but only for this one section*/
         0%{
-            background-image: url("../images/soccer.jpg");
+            background-image: url("../images/soccer.jpg");/*first picture change and starting picture*/
         }
         16%{
-            background-image: url("../images/comp2.jpg");
+            background-image: url("../images/comp2.jpg");/* second picture change*/
             
         }
         32%{
             
-            background-image: url("../images/eat.jpg");
+            background-image: url("../images/eat.jpg");/*third picture change*/
         }
         50%{
-            background-image: url("../images/swim.jpg");
+            background-image: url("../images/swim.jpg");/*fourth picture change*/
             
         }
         70%{
-            background-image: url("../images/log.jpg");
+            background-image: url("../images/log.jpg");/*fifth picture change*/
             
         }
         100%{
-            background-image: url("../images/game.jpg");
+            background-image: url("../images/game.jpg");/*sixth picture change*/
             
         }
     }
-    #pic3{
-        grid-column-start:1;
-        grid-column-end:2;
-        grid-row-start:5;
-        grid-row-end:6;
-        color:transparent;
-        animation-iteration-count: infinite;
-        animation-name: picture-three;
-        animation-duration: 30s;
-        background-size:100%;
-        background-repeat: round;
+    #pic3{/*This is the css for the left bottom picture changing section*/
+        grid-column-start:1;/*The vertical line where the column starts at of the section you want*/
+        grid-column-end:2;/*The vertical line where the column ends at of teh section you wnat*/
+        grid-row-start:5;/*The horizontal line where the rows starts at of the section you want*/
+        grid-row-end:6;/*The horizontal line where the row ends at of the section you want*/
+        color:transparent;/*Makes the text color in this section clear*/
+        background-size: 100%;/*Sizes the background image to the width and height of the section it is in*/
+        background-repeat: round;/*Stretches the image or repeats the image to fill the enitre section it is in*/
+        animation-iteration-count: infinite;/*Makes the animation of changing images infinite*/
+        animation-name: picture-three;/*Indicated which keyframe it is connected to*/
+        animation-duration: 15s;/*How long the animation is going for until it repeats*/
     }
-    @keyframes picture-three{
+    @keyframes picture-three{/*This is a list of all the pictures showing up at different time intervals represented by 
+        percentages when the animation is changing to each picture but only for this one section*/
         0%{
-            background-image: url("../images/game.jpg");
+            background-image: url("../images/game.jpg");/*first picture change and starting picture*/
         }
         16%{
-            background-image: url("../images/soccer.jpg");
+            background-image: url("../images/soccer.jpg");/*second picture change*/
         }
         32%{
-            background-image: url("../images/comp2.jpg");
+            background-image: url("../images/comp2.jpg");/*third picture change*/
         }
         50%{
-            background-image: url("../images/eat.jpg");
+            background-image: url("../images/eat.jpg");/*fourth picture change*/
         }
         70%{
-            background-image: url("../images/swim.jpg");
+            background-image: url("../images/swim.jpg");/*fifth picture change*/
         }
         100%{
-            background-image: url("../images/log.jpg");
+            background-image: url("../images/log.jpg");/*sixth picture change*/
         }
     }
-    #pic4{
-        grid-column-start:3;
-        grid-column-end:4;
-        grid-row-start:3;
-        grid-row-end:4;
-        color:transparent;
-        animation-iteration-count: infinite;
-        animation-name: picture-four;
-        animation-duration: 30s;
-        background-size:100%;
-        background-repeat: round;
+    #pic4{/*This is the css for the right top picture changing section*/
+        grid-column-start:3;/*The vertical line where the column starts at of the section you want*/
+        grid-column-end:4;/*The vertical line where the column ends at of teh section you wnat*/
+        grid-row-start:3;/*The horizontal line where the rows starts at of the section you want*/
+        grid-row-end:4;/*The horizontal line where the row ends at of the section you want*/
+        color:transparent;/*Makes the text color in this section clear*/
+        background-size: 100%;/*Sizes the background image to the width and height of the section it is in*/
+        background-repeat: round;/*Stretches the image or repeats the image to fill the enitre section it is in*/
+        animation-iteration-count: infinite;/*Makes the animation of changing images infinite*/
+        animation-name: picture-four;/*Indicated which keyframe it is connected to*/
+        animation-duration: 15s;/*How long the animation is going for until it repeats*/
     }
-    @keyframes picture-four{
+    @keyframes picture-four{/*This is a list of all the pictures showing up at different time intervals represented by 
+        percentages when the animation is changing to each picture but only for this one section*/
         0%{
-            background-image: url("../images/log.jpg");
+            background-image: url("../images/log.jpg");/*picture change and starting picture*/
         }
         16%{
-            background-image: url("../images/game.jpg");
+            background-image: url("../images/game.jpg");/*picture change*/
         }
         32%{
-            background-image: url("../images/soccer.jpg");
+            background-image: url("../images/soccer.jpg");/*picture change*/
         }
         50%{
-            background-image: url("../images/comp2.jpg");
+            background-image: url("../images/comp2.jpg");/*picture change*/
         }
         70%{
-            background-image: url("../images/eat.jpg");
+            background-image: url("../images/eat.jpg");/*picture change*/
         }
         100%{
-            background-image: url("../images/swim.jpg");
+            background-image: url("../images/swim.jpg");/*picture change*/
         }
     }
-    #pic5{
-        grid-column-start:3;
-        grid-column-end:4;
-        grid-row-start:4;
-        grid-row-end:5;
-        color:transparent;
-        animation-iteration-count: infinite;
-        animation-name: picture-five;
-        animation-duration: 30s;
-        background-size:100%;
-        background-repeat: round;
+    #pic5{/*This is the css for the right middle picture changing section*/
+        grid-column-start:3;/*The vertical line where the column starts at of the section you want*/
+        grid-column-end:4;/*The vertical line where the column ends at of teh section you wnat*/
+        grid-row-start:4;/*The horizontal line where the rows starts at of the section you want*/
+        grid-row-end:5;/*The horizontal line where the row ends at of the section you want*/
+        color:transparent;/*Makes the text color in this section clear*/
+        background-size: 100%;/*Sizes the background image to the width and height of the section it is in*/
+        background-repeat: round;/*Stretches the image or repeats the image to fill the enitre section it is in*/
+        animation-iteration-count: infinite;/*Makes the animation of changing images infinite*/
+        animation-name: picture-five;/*Indicated which keyframe it is connected to*/
+        animation-duration: 15s;/*How long the animation is going for until it repeats*/
     }
-    @keyframes picture-five{
+    @keyframes picture-five{/*This is a list of all the pictures showing up at different time intervals represented by 
+        percentages when the animation is changing to each picture but only for this one section*/
         0%{
-            background-image: url("../images/swim.jpg");
+            background-image: url("../images/swim.jpg");/*first picture change and starting picture*/
         }
         16%{
-            background-image: url("../images/log.jpg");
+            background-image: url("../images/log.jpg");/*second picture change*/
         }
         32%{
-            background-image: url("../images/game.jpg");
+            background-image: url("../images/game.jpg");/*third picture change*/
         }
         50%{
-            background-image: url("../images/soccer.jpg");
+            background-image: url("../images/soccer.jpg");/*fourth picture change*/
         }
         70%{
-            background-image: url("../images/comp2.jpg");
+            background-image: url("../images/comp2.jpg");/*fifth picture change*/
         }
         100%{
-            background-image: url("../images/eat.jpg");
+            background-image: url("../images/eat.jpg");/*sixth picture change*/
         }
     }
-    #pic6{
-        grid-column-start:3;
-        grid-column-end:4;
-        grid-row-start:5;
-        grid-row-end:6;
-        color:transparent;
-        animation-iteration-count: infinite;
-        animation-name: picture-six;
-        animation-duration: 30s;
-        background-size:100%;
-        background-repeat: round;
+    #pic6{/*This is the css for the right bottom picture changing section*/
+        grid-column-start:3;/*The vertical line where the column starts at of the section you want*/
+        grid-column-end:4;/*The vertical line where the column ends at of teh section you wnat*/
+        grid-row-start:5;/*The horizontal line where the rows starts at of the section you want*/
+        grid-row-end:6;/*The horizontal line where the row ends at of the section you want*/
+        color:transparent;/*Makes the text color in this section clear*/
+        background-size: 100%;/*Sizes the background image to the width and height of the section it is in*/
+        background-repeat: round;/*Stretches the image or repeats the image to fill the enitre section it is in*/
+        animation-iteration-count: infinite;/*Makes the animation of changing images infinite*/
+        animation-name: picture-six;/*Indicated which keyframe it is connected to*/
+        animation-duration: 15s;/*How long the animation is going for until it repeats*/
     }
-    @keyframes picture-six{
+    @keyframes picture-six{/*This is a list of all the pictures showing up at different time intervals represented by 
+        percentages when the animation is changing to each picture but only for this one section*/
         0%{
-            background-image: url("../images/eat.jpg");
+            background-image: url("../images/eat.jpg");/*first picture change and starting picture*/
         }
         16%{
-            background-image: url("../images/swim.jpg");
+            background-image: url("../images/swim.jpg");/*second picture change*/
         }
         32%{
-            background-image: url("../images/log.jpg");
+            background-image: url("../images/log.jpg");/*third picture change*/
         }
         50%{
-            background-image: url("../images/game.jpg");
+            background-image: url("../images/game.jpg");/*fourth picture change*/
         }
         70%{
-            background-image: url("../images/soccer.jpg");
+            background-image: url("../images/soccer.jpg");/*fifth picture change*/
         }
         100%{
-            background-image: url("../images/comp2.jpg");
+            background-image: url("../images/comp2.jpg");/*Sixth picture change*/
         }
     }
     .words{
-        grid-column-start:2;
-        grid-column-end:3;
-        grid-row-start:3;
-        grid-row-end:6;
-        font-family: 'Molly';
-        padding:7px;
-    
+        grid-column-start:2;/*The vertical line where the column starts at of the section you want*/
+        grid-column-end:3;/*The vertical line where the column ends at of the section you want*/
+        grid-row-start:3;/*The horizontal line where the rows starts at of the section you want*/
+        grid-row-end:7;/*The horizontal line where the row ends at of the section you want*/
+        font-family: 'Molly';/*This is the type of font chosen for ell the text in the article*/
+        padding:7px;/*Allows you to make the words inside the nav bar be away from the border edges of the article*/
+        font-size: 20px;/*Sizes the text in the article section to be either bigger or smaller*/
     }
-    #title{
-        text-align: center;
-        text-shadow: 1px 1px yellow, 2px 2px pink, 3px 3px blue;
+    #title{/*This is the css for the title ID tag in the article*/
+        text-align: center;/*Centered the text in the title ID section*/
+        text-shadow: 1px 1px yellow, 2px 2px pink, 3px 3px blue;/*Creates a shadow of different colors for the title text*/
     }
-    
-    .foot{
-        grid-column-start:1;
-        grid-column-end:4;
-        grid-row-start:6;
-        grid-row-end:7;
-        display: inline-block;
-        font-family: 'Molly';
-        font-size: 30px;
+    .foot{/*this is the css for the footer section at the bottom of the page*/
+        grid-column-start:1;/*The vertical line where the column starts at of the section you want*/
+        grid-column-end:4;/*The vertical line where the column starts at of the section you want*/
+        grid-row-start:6;/*The horizontal line where the rows starts at of the section you want*/
+        grid-row-end:7;/*The horizontal line where the row ends at of the section you want*/
+        display: inline-block;/*Makes all teh differnt blocks of this section become in a horizontal line, lining up next to eachother*/
+        font-family: 'Molly';/*This is the type of font chosen for ell the text in the footer*/
+        font-size: 30px;/*Sizes the text in footer to be either bigger or smaller*/
+        background-color:rgb(240, 114, 213);/*This is a background color for the footer section*/
     }
-    .foot ul li{
-        list-style-type: none;
-        text-decoration: none;
+    .foot ul li{/*this is the css for the ordered list in the footer*/
+        list-style-type: none;/*Makes towards where the bullet points dont shwo*/
+        text-decoration: none;/*Makes the text in the footer have no decorations like under lines*/
     }
-    .foot ul li a{
-        text-decoration: none;
+    .foot ul li a{/*this is the css for the links in teh footer*/
+        text-decoration: none;/*Makes the text in the footer have no decorations like under lines*/
     }
-    #office{
-        float:left;
-        margin-right: 50px;
+    #office{/*this is the css for the contact div in the footer*/
+        float:left;/*floats this div to left letting anyother object float next to it*/
+        margin-right: 50px;/*leaves a margin to the right between this div and the other div section*/
     }
-    #media{
-        display: inline;
+    #media{/*This is the css for the social media div in teh footer*/
+        display: inline;/*displays the section inline so it can float next to the office id section*/
         
     }
 }
 /*==========COMPUTER SCREEN====================================================================================================================================================*/
-@media only screen and (min-width: 1200px){
-    .grid-container{
-        display:grid;
-        grid-template-columns: 25% 50% 25%;
-        grid-template-rows: 17% 3% 22% 22% 22% auto;
-        margin:0px;
+@media only screen and (min-width: 1200px){/*this is the css for all screen that have a width above 1200px*/
+    .grid-container{/*The grid-container is a class for the body in the html, like a table it lets you place elements in a certain spot*/
+        display:grid;/*The display makes your grid show up */
+        grid-template-columns: 25% 50% 25%;/*I did my measurments in percentage, I find it easier, This is making the html page only have three column*/
+        grid-template-rows: 17% 3% 22% 22% 22% auto;/*This one is making the html page have 6 rows */
+        margin:0px;/*Leaves zero spaces between the pages borders and the screen borders*/
     }
     .head{
-        grid-column-start:1;
-        grid-column-end:4;
-        grid-row-start:1;
-        grid-row-end:2;
-        background-image: url("../images/headb.png");
-        text-align:center;
+        grid-column-start:1;/*The vertical line where the column starts at of the section you want*/
+        grid-column-end:4;/*The vertical line where the column ends at of teh section you wnat*/
+        grid-row-start:1;/*The horizontal line where the rows starts at of the section you want*/
+        grid-row-end:2;/*The horizontal line where the row ends at of the section you want*/
+        background-image: url("../images/headb.png");/*Is an image that truns into the backgorund for this section only*/
+        text-align:center;/*Centered the logo image in the head section*/
     }
     .head > img{
-        text-align:center;
-        align-content: center;
-        justify-content: center;
-        height: 100%;
+        text-align:center;/*Centered the logo image in the head section*/
+        align-content: center;/*Centered the logo image in the head section*/
+        justify-content: center;/*Centered the logo image in the head section*/
+        height: 100%;/*Having the height at 100% allows the image to have the sam eheight as its section*/
     }
-    .navigation{
-        grid-column-start:1;
-        grid-column-end:4;
-        grid-row-start:2;
-        grid-row-end:3;
-        background-color:rgb(230, 0, 0);
-        color:white;
-        text-align:right;
-        font-weight: bolder;
-        font-size: 20px;
-        padding-right: 10px;
-        padding-top: 5px;
-        box-shadow: 0 4px 2px -2px gray;
-        z-index:2;
+    #navigation{/*This is the css only for the nav bar*/
+        grid-column-start:1;/*The vertical line where the column starts at of the section you want*/
+        grid-column-end:4;/*The vertical line where the column ends at of teh section you wnat*/
+        grid-row-start:2;/*The horizontal line where the rows starts at of the section you want*/
+        grid-row-end:3;/*The horizontal line where the row ends at of the section you want*/
+        background-color:rgb(230, 0, 0);/*This is a background color for the nav bar*/
+        color:white;/*Turns the contents inside the nave bar white*/
+        text-align:right;/*Aligns the text in the nav bar to shift to the right side of the screen*/
+        font-weight: bolder;/*Boldens the text in the nav bar*/
+        font-size: 20px;/*Sizes the text in nav bar to be either bigger or smaller*/
+        padding-right: 10px;/*Allows you to make the words inside the nav bar be away from the right border edges of the nav bar*/
+        padding-top: 5px;/*Allows you to make the words inside the nav bar be away from the top border edges of the nav bar*/
+        
+        z-index:2;/*Makes the nav bar come to the top of all content on the page*/
         position: -webkit-sticky;
-        position: sticky;
-        top:0;
+        position: sticky;/*Makes teh nave bar stick to the top of the page like it is fixed but nly until you scroll past the nave bar*/
+        top:0;/*When the nav bar reaches the top there is zero space between the top of the page and the nav bar*/
     }
-    .navigation a{
-        text-decoration:none;
-        color:white;
-        box-shadow: 0 4px 2px -2px orange;
+    #navigation a{/*this is the css for the navagation links in teh nav*/
+        text-decoration:none;/*gets rid of the underline that the link comes wiht*/
+        color:white;/*Makes teh text in the links white*/
+        box-shadow: 0 4px 2px -2px orange;/*creates a box shadow for the links of the words*/
     }
-    #pic1{
-        grid-column-start:1;
-        grid-column-end:2;
-        grid-row-start:3;
-        grid-row-end:4;
-        color:transparent;
-        background-size: 100%;
-        background-repeat: round;
-        animation-iteration-count: infinite;
-        animation-name: picture-one;
-        animation-duration: 15s;
+    #pic1{/*This is the css for the left top picture changing section*/
+        grid-column-start:1;/*The vertical line where the column starts at of the section you want*/
+        grid-column-end:2;/*The vertical line where the column ends at of teh section you wnat*/
+        grid-row-start:3;/*The horizontal line where the rows starts at of the section you want*/
+        grid-row-end:4;/*The horizontal line where the row ends at of the section you want*/
+        color:transparent;/*Makes the text color in this section clear*/
+        background-size: 100%;/*Sizes the background image to the width and height of the section it is in*/
+        background-repeat: round;/*Stretches the image or repeats the image to fill the enitre section it is in*/
+        animation-iteration-count: infinite;/*Makes the animation of changing images infinite*/
+        animation-name: picture-one;/*Indicated which keyframe it is connected to*/
+        animation-duration: 15s;/*How long the animation is going for until it repeats*/
     }
-    @keyframes picture-one{
+    @keyframes picture-one{/*This is a list of all the pictures showing up at different time intervals represented by 
+        percentages when the animation is changing to each picture but only for this one section*/
         0%{
-            background-image: url("../images/comp2.jpg");
+            background-image: url("../images/comp2.jpg");/*first picture change and starting picture*/
         }
         16%{
-            background-image: url("../images/eat.jpg");
+            background-image: url("../images/eat.jpg");/*second picture change*/
         }
         32%{
-            background-image: url("../images/swim.jpg");
+            background-image: url("../images/swim.jpg");/*third picture change*/
         }
         50%{
-            background-image: url("../images/log.jpg");
+            background-image: url("../images/log.jpg");/*fourth picture change*/
         }
         70%{
-            background-image: url("../images/game.jpg");
+            background-image: url("../images/game.jpg");/*fifth picture change*/
         }
         100%{
-            background-image: url("../images/soccer.jpg");
+            background-image: url("../images/soccer.jpg");/*sixth picture change*/
         }
     }
-    #pic2{
-        grid-column-start:1;
-        grid-column-end:2;
-        grid-row-start:4;
-        grid-row-end:5;
-        color:transparent;
-        animation-iteration-count: infinite;
-        animation-name: picture-two;
-        animation-duration:15s;
-        background-size:100%;
-        background-repeat: round;
+    #pic2{/*This is the css for the left middle picture changing section*/
+        grid-column-start:1;/*The vertical line where the column starts at of the section you want*/
+        grid-column-end:2;/*The vertical line where the column ends at of teh section you wnat*/
+        grid-row-start:4;/*The horizontal line where the rows starts at of the section you want*/
+        grid-row-end:5;/*The horizontal line where the row ends at of the section you want*/
+        color:transparent;/*Makes the text color in this section clear*/
+        background-size: 100%;/*Sizes the background image to the width and height of the section it is in*/
+        background-repeat: round;/*Stretches the image or repeats the image to fill the enitre section it is in*/
+        animation-iteration-count: infinite;/*Makes the animation of changing images infinite*/
+        animation-name: picture-two;/*Indicated which keyframe it is connected to*/
+        animation-duration: 15s;/*How long the animation is going for until it repeats*/
     }
-    @keyframes picture-two{
+    @keyframes picture-two{/*This is a list of all the pictures showing up at different time intervals represented by 
+        percentages when the animation is changing to each picture but only for this one section*/
         0%{
-            background-image: url("../images/soccer.jpg");
+            background-image: url("../images/soccer.jpg");/*first picture change and starting picture*/
         }
         16%{
-            background-image: url("../images/comp2.jpg");
+            background-image: url("../images/comp2.jpg");/* second picture change*/
             
         }
         32%{
             
-            background-image: url("../images/eat.jpg");
+            background-image: url("../images/eat.jpg");/*third picture change*/
         }
         50%{
-            background-image: url("../images/swim.jpg");
+            background-image: url("../images/swim.jpg");/*fourth picture change*/
             
         }
         70%{
-            background-image: url("../images/log.jpg");
+            background-image: url("../images/log.jpg");/*fifth picture change*/
             
         }
         100%{
-            background-image: url("../images/game.jpg");
+            background-image: url("../images/game.jpg");/*sixth picture change*/
             
         }
     }
-    #pic3{
-        grid-column-start:1;
-        grid-column-end:2;
-        grid-row-start:5;
-        grid-row-end:6;
-        color:transparent;
-        animation-iteration-count: infinite;
-        animation-name: picture-three;
-        animation-duration: 15s;
-        background-size:100%;
-        background-repeat: round;
+    #pic3{/*This is the css for the left bottom picture changing section*/
+        grid-column-start:1;/*The vertical line where the column starts at of the section you want*/
+        grid-column-end:2;/*The vertical line where the column ends at of teh section you wnat*/
+        grid-row-start:5;/*The horizontal line where the rows starts at of the section you want*/
+        grid-row-end:6;/*The horizontal line where the row ends at of the section you want*/
+        color:transparent;/*Makes the text color in this section clear*/
+        background-size: 100%;/*Sizes the background image to the width and height of the section it is in*/
+        background-repeat: round;/*Stretches the image or repeats the image to fill the enitre section it is in*/
+        animation-iteration-count: infinite;/*Makes the animation of changing images infinite*/
+        animation-name: picture-three;/*Indicated which keyframe it is connected to*/
+        animation-duration: 15s;/*How long the animation is going for until it repeats*/
     }
-    @keyframes picture-three{
+    @keyframes picture-three{/*This is a list of all the pictures showing up at different time intervals represented by 
+        percentages when the animation is changing to each picture but only for this one section*/
         0%{
-            background-image: url("../images/game.jpg");
+            background-image: url("../images/game.jpg");/*first picture change and starting picture*/
         }
         16%{
-            background-image: url("../images/soccer.jpg");
+            background-image: url("../images/soccer.jpg");/*second picture change*/
         }
         32%{
-            background-image: url("../images/comp2.jpg");
+            background-image: url("../images/comp2.jpg");/*third picture change*/
         }
         50%{
-            background-image: url("../images/eat.jpg");
+            background-image: url("../images/eat.jpg");/*fourth picture change*/
         }
         70%{
-            background-image: url("../images/swim.jpg");
+            background-image: url("../images/swim.jpg");/*fifth picture change*/
         }
         100%{
-            background-image: url("../images/log.jpg");
+            background-image: url("../images/log.jpg");/*sixth picture change*/
         }
     }
-    #pic4{
-        grid-column-start:3;
-        grid-column-end:4;
-        grid-row-start:3;
-        grid-row-end:4;
-        color:transparent;
-        animation-iteration-count: infinite;
-        animation-name: picture-four;
-        animation-duration: 15s;
-        background-size:100%;
-        background-repeat: round;
+    #pic4{/*This is the css for the right top picture changing section*/
+        grid-column-start:3;/*The vertical line where the column starts at of the section you want*/
+        grid-column-end:4;/*The vertical line where the column ends at of teh section you wnat*/
+        grid-row-start:3;/*The horizontal line where the rows starts at of the section you want*/
+        grid-row-end:4;/*The horizontal line where the row ends at of the section you want*/
+        color:transparent;/*Makes the text color in this section clear*/
+        background-size: 100%;/*Sizes the background image to the width and height of the section it is in*/
+        background-repeat: round;/*Stretches the image or repeats the image to fill the enitre section it is in*/
+        animation-iteration-count: infinite;/*Makes the animation of changing images infinite*/
+        animation-name: picture-four;/*Indicated which keyframe it is connected to*/
+        animation-duration: 15s;/*How long the animation is going for until it repeats*/
     }
-    @keyframes picture-four{
+    @keyframes picture-four{/*This is a list of all the pictures showing up at different time intervals represented by 
+        percentages when the animation is changing to each picture but only for this one section*/
         0%{
-            background-image: url("../images/log.jpg");
+            background-image: url("../images/log.jpg");/*picture change and starting picture*/
         }
         16%{
-            background-image: url("../images/game.jpg");
+            background-image: url("../images/game.jpg");/*picture change*/
         }
         32%{
-            background-image: url("../images/soccer.jpg");
+            background-image: url("../images/soccer.jpg");/*picture change*/
         }
         50%{
-            background-image: url("../images/comp2.jpg");
+            background-image: url("../images/comp2.jpg");/*picture change*/
         }
         70%{
-            background-image: url("../images/eat.jpg");
+            background-image: url("../images/eat.jpg");/*picture change*/
         }
         100%{
-            background-image: url("../images/swim.jpg");
+            background-image: url("../images/swim.jpg");/*picture change*/
         }
     }
-    #pic5{
-        grid-column-start:3;
-        grid-column-end:4;
-        grid-row-start:4;
-        grid-row-end:5;
-        color:transparent;
-        animation-iteration-count: infinite;
-        animation-name: picture-five;
-        animation-duration: 15s;
-        background-size:100%;
-        background-repeat: round;
+    #pic5{/*This is the css for the right middle picture changing section*/
+        grid-column-start:3;/*The vertical line where the column starts at of the section you want*/
+        grid-column-end:4;/*The vertical line where the column ends at of teh section you wnat*/
+        grid-row-start:4;/*The horizontal line where the rows starts at of the section you want*/
+        grid-row-end:5;/*The horizontal line where the row ends at of the section you want*/
+        color:transparent;/*Makes the text color in this section clear*/
+        background-size: 100%;/*Sizes the background image to the width and height of the section it is in*/
+        background-repeat: round;/*Stretches the image or repeats the image to fill the enitre section it is in*/
+        animation-iteration-count: infinite;/*Makes the animation of changing images infinite*/
+        animation-name: picture-five;/*Indicated which keyframe it is connected to*/
+        animation-duration: 15s;/*How long the animation is going for until it repeats*/
     }
-    @keyframes picture-five{
+    @keyframes picture-five{/*This is a list of all the pictures showing up at different time intervals represented by 
+        percentages when the animation is changing to each picture but only for this one section*/
         0%{
-            background-image: url("../images/swim.jpg");
+            background-image: url("../images/swim.jpg");/*first picture change and starting picture*/
         }
         16%{
-            background-image: url("../images/log.jpg");
+            background-image: url("../images/log.jpg");/*second picture change*/
         }
         32%{
-            background-image: url("../images/game.jpg");
+            background-image: url("../images/game.jpg");/*third picture change*/
         }
         50%{
-            background-image: url("../images/soccer.jpg");
+            background-image: url("../images/soccer.jpg");/*fourth picture change*/
         }
         70%{
-            background-image: url("../images/comp2.jpg");
+            background-image: url("../images/comp2.jpg");/*fifth picture change*/
         }
         100%{
-            background-image: url("../images/eat.jpg");
+            background-image: url("../images/eat.jpg");/*sixth picture change*/
         }
     }
-    #pic6{
-        grid-column-start:3;
-        grid-column-end:4;
-        grid-row-start:5;
-        grid-row-end:6;
-        color:transparent;
-        animation-iteration-count: infinite;
-        animation-name: picture-six;
-        animation-duration: 15s;
-        background-size:100%;
-        background-repeat: round;
+    #pic6{/*This is the css for the right bottom picture changing section*/
+        grid-column-start:3;/*The vertical line where the column starts at of the section you want*/
+        grid-column-end:4;/*The vertical line where the column ends at of teh section you wnat*/
+        grid-row-start:5;/*The horizontal line where the rows starts at of the section you want*/
+        grid-row-end:6;/*The horizontal line where the row ends at of the section you want*/
+        color:transparent;/*Makes the text color in this section clear*/
+        background-size: 100%;/*Sizes the background image to the width and height of the section it is in*/
+        background-repeat: round;/*Stretches the image or repeats the image to fill the enitre section it is in*/
+        animation-iteration-count: infinite;/*Makes the animation of changing images infinite*/
+        animation-name: picture-six;/*Indicated which keyframe it is connected to*/
+        animation-duration: 15s;/*How long the animation is going for until it repeats*/
     }
-    @keyframes picture-six{
+    @keyframes picture-six{/*This is a list of all the pictures showing up at different time intervals represented by 
+        percentages when the animation is changing to each picture but only for this one section*/
         0%{
-            background-image: url("../images/eat.jpg");
+            background-image: url("../images/eat.jpg");/*first picture change and starting picture*/
         }
         16%{
-            background-image: url("../images/swim.jpg");
+            background-image: url("../images/swim.jpg");/*second picture change*/
         }
         32%{
-            background-image: url("../images/log.jpg");
+            background-image: url("../images/log.jpg");/*third picture change*/
         }
         50%{
-            background-image: url("../images/game.jpg");
+            background-image: url("../images/game.jpg");/*fourth picture change*/
         }
         70%{
-            background-image: url("../images/soccer.jpg");
+            background-image: url("../images/soccer.jpg");/*fifth picture change*/
         }
         100%{
-            background-image: url("../images/comp2.jpg");
+            background-image: url("../images/comp2.jpg");/*Sixth picture change*/
         }
     }
     .words{
-        grid-column-start:2;
-        grid-column-end:3;
-        grid-row-start:3;
-        grid-row-end:6;
-        font-family: 'Molly';
-        padding:7px;
-        font-size: 20px;
+        grid-column-start:2;/*The vertical line where the column starts at of the section you want*/
+        grid-column-end:3;/*The vertical line where the column ends at of the section you want*/
+        grid-row-start:3;/*The horizontal line where the rows starts at of the section you want*/
+        grid-row-end:7;/*The horizontal line where the row ends at of the section you want*/
+        font-family: 'Molly';/*This is the type of font chosen for ell the text in the article*/
+        padding:7px;/*Allows you to make the words inside the nav bar be away from the border edges of the article*/
+        font-size: 20px;/*Sizes the text in the article section to be either bigger or smaller*/
     }
-    #title{
-        text-align: center;
-        text-shadow: 1px 1px yellow, 2px 2px pink, 3px 3px blue;
+    #title{/*This is the css for the title ID tag in the article*/
+        text-align: center;/*Centered the text in the title ID section*/
+        text-shadow: 1px 1px yellow, 2px 2px pink, 3px 3px blue;/*Creates a shadow of different colors for the title text*/
     }
-    .foot{
-        grid-column-start:1;
-        grid-column-end:4;
-        grid-row-start:6;
-        grid-row-end:7;
-        display: inline-block;
-        font-family: 'Molly';
-        font-size: 30px;
+    .foot{/*this is the css for the footer section at the bottom of the page*/
+        grid-column-start:1;/*The vertical line where the column starts at of the section you want*/
+        grid-column-end:4;/*The vertical line where the column starts at of the section you want*/
+        grid-row-start:6;/*The horizontal line where the rows starts at of the section you want*/
+        grid-row-end:7;/*The horizontal line where the row ends at of the section you want*/
+        display: inline-block;/*Makes all teh differnt blocks of this section become in a horizontal line, lining up next to eachother*/
+        font-family: 'Molly';/*This is the type of font chosen for ell the text in the footer*/
+        font-size: 30px;/*Sizes the text in footer to be either bigger or smaller*/
+        background-color:rgb(240, 114, 213);/*This is a background color for the footer section*/
     }
-    .foot ul li{
-        list-style-type: none;
-        text-decoration: none;
+    .foot ul li{/*this is the css for the ordered list in the footer*/
+        list-style-type: none;/*Makes towards where the bullet points dont shwo*/
+        text-decoration: none;/*Makes the text in the footer have no decorations like under lines*/
     }
-    .foot ul li a{
-        text-decoration: none;
+    .foot ul li a{/*this is the css for the links in teh footer*/
+        text-decoration: none;/*Makes the text in the footer have no decorations like under lines*/
     }
-    #office{
-        float:left;
-        margin-right: 50px;
+    #office{/*this is the css for the contact div in the footer*/
+        float:left;/*floats this div to left letting anyother object float next to it*/
+        margin-right: 50px;/*leaves a margin to the right between this div and the other div section*/
     }
-    #media{
-        display: inline;
+    #media{/*This is the css for the social media div in teh footer*/
+        display: inline;/*displays the section inline so it can float next to the office id section*/
         
     }
 }

@@ -2,13 +2,20 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="CSS/index.css">
+        <link rel="icon" type="images/png" href="images/Slog.png" sizes="16x16 32x32">
+        <script src="script.js"></script>
     </head>
-    <body class="grid-container">
+    <body class="grid-container" oncopy="cawt()" onwheel="shad()">
+        <!--This is the script tag that links my Java Script wiht my HTML-->
+        <script src="script.js"></script>
+<!--This is the top banner that has a background image to it that spans across the top of the page-->
         <header class="head">
+            <!--This image tag contains my logo which is in the middle of the header-->
             <img src="images/log.jpg">
             
         </header>
-        <nav class="navigation">
+<!--This is my navigation bar under my header that also spans across the width of the entire page-->
+        <nav id="navigation">
             <a href="index.html">Home</a>
             &#124;
             <a href="safe.html">Saftey</a>
@@ -17,42 +24,40 @@
             &#124;
             <a href="testimon.html">Testimonials</a>
         </nav>
+        <!--This is picture one that switches to different pictures it is the left top picture box-->
         <div id="pic1">
             
         </div>
+        <!--This is picture two that switches to different pictures it is the left middle picture box-->
         <div id="pic2">
-            <h1>
-                lkjhgfd
-            </h1>
+
         </div>
+        <!--This is picture three that switches to different pictures it is the left bottom picture box-->
         <div id="pic3">
-            <h1>
-                lkjhgfd
-            </h1>
+
         </div>
+        <!--This is picture four that switches to different pictures it is the right top picture box-->
         <div id="pic4">
-            <h1>
-                lkjhgfd
-            </h1>
+
         </div>
+        <!--This is picture five that switches to different pictures it is the right middle picture box-->
         <div id="pic5">
-            <h1>
-                lkjhgfd
-            </h1>
+
         </div>
+        <!--This is picture six that switches to different pictures it is the right bottom picture box-->
         <div id="pic6">
-            <h1>
-                lkjhgfd
-            </h1>
+
         </div>
+        <!--This is the main article were you see where the words you will type should pop up, it is placed inbetween the pictures 
+            boxes with pictures 1-3 being on the left of it and pictures 4-6 being on the right of the articel-->
         <article class="words">
-            <h1 id="title">About Us</h1>
+            <h1 id="title" onmouseover="ohver()">About Us</h1>
             <hr>
             <h3>Company Used</h3>
             <p>
                 Exuberant Camp is funded through a company we are using called I.I.W.I.I Inc.. They support always helping kids get more education and being able to
                 explore the vast world they live in. If you need help with funding Exuberant Camp suggest going through with I.I.W.I.I Inc. you can call them at
-                ------ or email them at -------. 
+                <a href="tel:#">888-555-7777</a> or email them at <a href="mailto:#">ItIsWhatItIs@gmail.com</a>. 
             </p>
             <hr>
             <h3>Staff</h3>
@@ -72,6 +77,7 @@
                 about your kids activites.
             </p>
         </article>
+        <!--This is the footer at the bottom of the page spanning the entire bottom with links to sociaal media, emails, and phone numbers-->
         <footer class="foot">
             <div id="office">
                 <h5>Camp office</h5>
